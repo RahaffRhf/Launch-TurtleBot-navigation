@@ -69,18 +69,20 @@ roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
 ```
 <img src="https://github.com/user-attachments/assets/89c19619-dab2-47da-b325-78e8920955f7">
 create a map and save it
+
 ```
 rosrun map_server map_saver -f ~/map
 ```
 then run this command:
+
 ```
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
 <img src="https://github.com/user-attachments/assets/da681ab4-7542-46e0-87f8-0594f76e620b">
 
-#navigation
+# navigation
+start the navigation and load the saved map, using this command:
 
-## start the navigation and load the saved map, using this command:
 ```
 roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:='/home/muh/map.yaml'
 
